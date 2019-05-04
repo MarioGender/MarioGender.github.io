@@ -1,0 +1,233 @@
+@import 'normalise';
+@import 'variables';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css?family=Laila:500|Philosopher:400i|Proza+Libre');
+
+
+// GLOBALS
+
+.brokenlink {
+    //created class for JS to override default download/redirect function and alert
+}
+
+li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+p {
+    font-family: $mt;
+}
+
+h1 {
+    font-family: $et;
+}
+
+h2 {
+    font-family: $et;
+}
+
+a {
+    color: $spec;
+    font-family: $et;
+}
+
+a:hover{
+    text-decoration: none;
+    color: $bt-s;
+}
+
+// NAVIGATION
+
+#nav {
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1070;
+}
+
+#insidenav {
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    .nav-item {
+        min-width: 30%;
+        @include navfloat();
+        float:left;
+        border-radius: 10px;
+        
+        &:hover {
+            background-color: $bt-s;
+            
+        }
+        &#cvnav
+        {
+            visibility: hidden;
+            max-width: 0;
+            max-height: 0;
+            display: inline-block;
+            @include floatright();
+            
+            & a {
+                color: $t-p;
+            }
+        }
+        &.current {
+            background-color: $bt-s;
+            a{
+               color: $t-p; 
+            }
+        }
+        
+        a   {
+            color: $spec;  
+            border-style: hidden;
+            }
+    }
+}
+
+// HEADER 
+
+#profileimage {
+    max-width: 260px;
+    min-width: 220px;
+}
+
+#downloadcv {
+    background-color: black;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: -25px;
+    margin-right: -15px;
+    border-radius: 5px;
+}
+
+#header {
+    background-color: $b-p;
+    border-radius: 10px;
+    color: $bt-s;
+    margin-top: 40px;
+}
+
+#name {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+#info {
+    font-size: 1em;
+    font-family: $et;
+}
+
+// CONTENT
+
+#content {
+    background-color: $bt-s;
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: -18px;
+}
+
+#maincontainer {
+    position: relative;
+}
+
+
+// FOOTER
+
+#copyright {
+    color: black;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+#thanks {
+    color: black;
+    font-weight: 700;
+}
+
+#ftr {
+    background-color: $b-p;
+    color: $bt-s;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+#topbtn {
+    position:fixed;
+    right: 10px;
+    bottom: 10px;
+    visibility:hidden;
+    
+    width:30px;
+    height: 60px;
+    border-radius: 10px;
+    
+    &:hover {
+    //background-color: $b-p;
+    border: 2px;
+    border-color: $bt-s;
+    border-style: solid;
+        .arrowup {
+            bottom: 3px;
+        }
+        
+    }
+    &.show {
+    visibility:visible;
+    }
+    
+    .arrowup {
+    width:25px;
+    position: relative;
+    bottom: -30px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+}
+
+
+.icon {
+    width: 20px;
+    margin-right: 20px;
+}
+
+// MEDIAS
+
+@media (min-width: 768px) {
+    
+    #name {
+        font-size: 80px
+    }   
+    
+    
+}
+
+@media (min-width: 768px) and (max-width: 985px){
+    #info {
+        display: inline-block;
+        min-width: 70%;
+        padding-top: 20px;
+    }
+}
+
+@media (min-width: 986px) {
+    #info {
+        font-size: 25px 
+    } 
+    
+    #downloadcv
+    {
+        visibility: hidden;
+    }
+}
