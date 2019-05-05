@@ -313,6 +313,9 @@ template {
   padding-right: 0;
   background-color: #EDF2F4; }
 
+i {
+  font-family: "Laila", Helvetica, sans-serif; }
+
 li {
   padding-top: 10px;
   padding-bottom: 10px; }
@@ -416,7 +419,7 @@ a:hover {
 
 #maincontainer {
   position: relative;
-  padding-top: 50px; }
+  padding-top: 70px; }
 
 #content {
   background-color: #EDF2F4;
