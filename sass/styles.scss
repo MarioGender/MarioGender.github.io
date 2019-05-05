@@ -10,6 +10,17 @@
     //created class for JS to override default download/redirect function and alert
 }
 
+#body {
+        background-image: url(../images/pattern.png);
+        background-repeat: repeat;
+}
+
+#article {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: $bt-s;
+}
+
 li {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -57,6 +68,14 @@ a:hover{
         float:left;
         border-radius: 10px;
         
+        &:first-child {
+            border-top-left-radius: 0px;
+        }
+        
+        &:nth-child(3) {
+            border-top-right-radius: 0px;
+        }
+        
         &:hover {
             background-color: $bt-s;
             
@@ -102,7 +121,6 @@ a:hover{
     right: 0;
     padding-right: 5px;
     padding-left: 5px;
-    margin-bottom: -25px;
     margin-right: -15px;
     border-radius: 5px;
 }
@@ -111,7 +129,6 @@ a:hover{
     background-color: $b-p;
     border-radius: 10px;
     color: $bt-s;
-    margin-top: 40px;
 }
 
 #name {
@@ -124,18 +141,19 @@ a:hover{
     font-family: $et;
 }
 
+#maincontainer {
+    position: relative;
+    padding-top: 50px;
+}
+
+
 // CONTENT
 
 #content {
     background-color: $bt-s;
-    border-radius: 10px;
-    margin-top: 3px;
     margin-bottom: -18px;
 }
 
-#maincontainer {
-    position: relative;
-}
 
 
 // FOOTER
@@ -157,6 +175,7 @@ a:hover{
     color: $bt-s;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    z-index: 1050;
 }
 
 
@@ -229,5 +248,16 @@ a:hover{
     #downloadcv
     {
         visibility: hidden;
+    }
+}
+
+@media (max-width: 768px)
+{
+    #maincontainer {
+        padding-bottom: 2rem! important;
+    }
+    
+    #content {
+        padding-top: 3px! important;
     }
 }

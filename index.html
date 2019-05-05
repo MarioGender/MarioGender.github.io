@@ -9,8 +9,9 @@
         <title>Mario Gender | About Me</title>
     </head>
     
-    <body>
-        <article>
+    <body id="body">
+        <article id="article" class="container">
+             <div id="backgroundfiller"  class="position-fixed"></div>
              <div class="position-fixed container px-0"  id="nav">
                 <nav id= "insidenav" class="nav nav-tabs nav-justified" role=navigation>
                         <div class="nav-item  current">    
@@ -27,8 +28,10 @@
                         </div>   
                 </nav>
             </div> 
+            <div>
             <header class ="container" id="header">
-                <section id="maincontainer" class="pt-5 pb-4 container clearfix text-center">
+                
+                <section id="maincontainer" class="pb-4 container clearfix text-center">
                     <img id="profileimage" class="rounded-circle float-md-left w-50" src= "../images/educationPhoto600.jpg" alt="A profile photo">
                     <div>
                         <h1 class ="my-4" id="name">Mario Gender</h1>
@@ -66,7 +69,7 @@
                                 </a>
                             </li>
                             <li class="col-lg">
-                                <a href=""><img src="../images/telephone.png" class="icon" alt="Telephone icon">+381 64 545 7055
+                                <a href=""><img src="../images/telephone.png" class="icon" alt="Telephone icon">+381 11 111-1111
                                 </a>
                             </li>
                             <li class="col-lg">
@@ -87,8 +90,8 @@
                         </p>
                         <a href="javascript:" id="topbtn" alt="Back to top button"><img class="arrowup" src="../images/arrow.png" alt="Arrow icon"></a>
                      </div>
-            </footer>
-                
+            </footer> 
+            </div><!--container-->
         </article>
         
         <script src="../js/bootstrap.min.js"></script>

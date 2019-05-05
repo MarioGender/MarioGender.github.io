@@ -1,10 +1,10 @@
 @mixin navfloat() 
 {
     @media (min-width: 990px) {
-        max-width: 20%;
-        min-width: 20%;
+        max-width: 18%;
+        min-width: 18%;
         &:nth-child(3) {
-            margin-right: 10%;
+            margin-right: 20%;
         }
     }
 }
@@ -12,9 +12,9 @@
 @mixin floatright()
 {
     @media (min-width: 990px) {
-        max-width: 30%;
+        max-width: 26%;
         max-height: 40px;
-        width: 30%;
+        width: 26%;
         height: 40px;
         visibility: visible;
         background-color: $bt-s;

@@ -304,6 +304,15 @@ template {
 [hidden] {
   display: none; }
 
+#body {
+  background-image: url(../images/pattern.png);
+  background-repeat: repeat; }
+
+#article {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #EDF2F4; }
+
 li {
   padding-top: 10px;
   padding-bottom: 10px; }
@@ -341,10 +350,14 @@ a:hover {
     border-radius: 10px; }
     @media (min-width: 990px) {
       #insidenav .nav-item {
-        max-width: 20%;
-        min-width: 20%; }
+        max-width: 18%;
+        min-width: 18%; }
         #insidenav .nav-item:nth-child(3) {
-          margin-right: 10%; } }
+          margin-right: 20%; } }
+    #insidenav .nav-item:first-child {
+      border-top-left-radius: 0px; }
+    #insidenav .nav-item:nth-child(3) {
+      border-top-right-radius: 0px; }
     #insidenav .nav-item:hover {
       background-color: #EDF2F4; }
     #insidenav .nav-item#cvnav {
@@ -354,9 +367,9 @@ a:hover {
       display: inline-block; }
       @media (min-width: 990px) {
         #insidenav .nav-item#cvnav {
-          max-width: 30%;
+          max-width: 26%;
           max-height: 40px;
-          width: 30%;
+          width: 26%;
           height: 40px;
           visibility: visible;
           background-color: #EDF2F4;
@@ -385,15 +398,13 @@ a:hover {
   right: 0;
   padding-right: 5px;
   padding-left: 5px;
-  margin-bottom: -25px;
   margin-right: -15px;
   border-radius: 5px; }
 
 #header {
   background-color: #2B2D42;
   border-radius: 10px;
-  color: #EDF2F4;
-  margin-top: 40px; }
+  color: #EDF2F4; }
 
 #name {
   font-size: 2.5em;
@@ -403,14 +414,13 @@ a:hover {
   font-size: 1em;
   font-family: "Laila", Helvetica, sans-serif; }
 
+#maincontainer {
+  position: relative;
+  padding-top: 50px; }
+
 #content {
   background-color: #EDF2F4;
-  border-radius: 10px;
-  margin-top: 3px;
   margin-bottom: -18px; }
-
-#maincontainer {
-  position: relative; }
 
 #copyright {
   color: black;
@@ -426,7 +436,8 @@ a:hover {
   background-color: #2B2D42;
   color: #EDF2F4;
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px; }
+  border-top-right-radius: 10px;
+  z-index: 1050; }
 
 #topbtn {
   position: fixed;
@@ -472,5 +483,11 @@ a:hover {
 
   #downloadcv {
     visibility: hidden; } }
+@media (max-width: 768px) {
+  #maincontainer {
+    padding-bottom: 2rem !important; }
+
+  #content {
+    padding-top: 3px !important; } }
 
 /*# sourceMappingURL=styles.css.map */
